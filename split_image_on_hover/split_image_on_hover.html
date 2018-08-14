@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #928686;
+        }
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background: #333;
+            box-shadow: 2px 2px 8px black;
+        }
+
+        .about {
+            padding: 40px;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .about h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        .img_hover {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img_hover:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: url(https://source.unsplash.com/category/wallpaper/1920x1080);
+            background-size: cover;
+            transform-origin: bottom;
+            transition: .5s;
+        }
+
+        .box:hover .img_hover:before {
+            transform: rotateX(90deg) translateY(50%);
+        }
+
+        .img_hover:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url(https://source.unsplash.com/category/wallpaper/1920x1080);
+            background-size: cover;
+            transform-origin: top;
+            transition: .5s;
+            background-position: 410px;
+        }
+
+        .box:hover .img_hover:after {
+            transform: rotateX(90deg) translateY(-50%);
+        }
+    </style>
+    <title>Splip image on hover</title>
+</head>
+<body>
+    <div class="box">
+        <div class="about">
+            <h2>Split image</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dolor mollitia! Minima quidem necessitatibus ea aliquam? Fuga quaerat aliquid ex?</p>
+        </div>
+        <div class="img_hover"></div>
+    </div>
+</body>
+</html>
