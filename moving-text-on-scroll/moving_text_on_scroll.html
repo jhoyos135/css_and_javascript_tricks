@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #333;
+            height: 5000px;
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            font-size: 10vw;
+            color: white;
+            text-shadow: 5px 4px 8px rgba(255,255,255,0.1);
+            left: 2400px;
+        }
+    </style>
+    <title>Moving Text</title>
+</head>
+<body>
+    <h1 class="text">Moving Text</h1>
+    
+    <script>
+        let text = document.querySelector(".text");
+        let body = document.querySelector("body");
+
+        let scrollFunction =  () => {
+           text.style.left =  Math.max(2400 - 1.50 * window.scrollY, -1400) + 'px';
+        }
+
+        body.onscroll = scrollFunction;
+    </script>
+</body>
+</html>
