@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            background-image: url(nathan-dumlao-485797-unsplash.jpg);
+            background-position: 50%;
+            background-color: #90cde3;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 650px;
+            width: 100vw;
+            position: relative;
+            overflow: hidden;
+        }
+        .container img {
+            width: 100%;
+        }
+
+        .container .cloud-1  {
+            position: absolute;
+            top: -50%;
+            animation: cloud_one infinite 160s linear;
+            animation-fill-mode: forwards;
+            
+        }
+
+        @keyframes cloud_one {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(100%);}
+        }
+        .container .cloud-2 {
+            position: absolute;
+            top: -50%;
+            animation: cloud_two infinite 80s linear;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes cloud_two {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(100%);}
+        }
+        .container .cloud-3 {
+            position: absolute;
+            top: -20%;
+            animation: cloud_three infinite 40s linear 40s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes cloud_three {
+            0% {transform: translateX(-100%);}
+            100% {transform: translateX(100%);}
+        }
+        .container .cloud-4 {
+            position: absolute;
+            top: -40%;
+            animation: cloud_four infinite 240s linear 20s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes cloud_four {
+            0% {transform: translateX(100%);}
+            100% {transform: translateX(100%);}
+        }
+    </style>
+    <title>Cloud Animation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cloud-1"><img src="cloud_1.png" alt=""></div>
+        <div class="cloud-2"><img src="cloud_2.png" alt=""></div>
+        <!-- <div class="cloud-3"><img src="cloud_1.png" alt=""></div>
+        <div class="cloud-4"><img src="cloud_2.png" alt=""></div> -->
+    </div>
+    
+</body>
+</html>
