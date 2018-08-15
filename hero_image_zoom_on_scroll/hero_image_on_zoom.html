@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        section img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    </style>
+    <title>Hero Img Zoom</title>
+</head>
+<body>
+    <section class="zoom">
+        <img src="https://source.unsplash.com/category/wallpaper/1920x1080">
+    </section>
+    <section></section>
+
+  <script>
+
+      window.addEventListener("scroll", () => {
+        let scrollY = window.scrollY;
+        let zoom = document.querySelector(".zoom img");
+        zoom.style.width = (100 + scrollY/10) + "%";
+      });
+
+  </script>
+</body>
+</html>
