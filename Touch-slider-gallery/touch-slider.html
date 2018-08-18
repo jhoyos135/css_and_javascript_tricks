@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Touch Slider Gallery</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+
+  <style>
+    body {
+      background: #333;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+    
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 450px;
+      height: 380px;
+      background: #fff;
+    }
+    .swiper-slide .imgBx {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+    .swiper-slide .imgBx img {
+        width: 100%;
+    }
+    .swiper-slide .details {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .swiper-slide .details h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        text-align: center;
+        line-height: 20px;
+    }
+    .swiper-slide .details h3 span {
+        font-size: 16px;
+        color: rgb(179, 59, 95);
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <div class="imgBx">
+              <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+          </div>
+          <div class="details">
+              <h3>Title<br><span>Description</span></h3>
+          </div>
+      </div>
+
+      <div class="swiper-slide">
+            <div class="imgBx">
+                <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+            </div>
+            <div class="details">
+                <h3>Title<br><span>Description</span></h3>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+                <div class="imgBx">
+                    <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+                </div>
+                <div class="details">
+                    <h3>Title<br><span>Description</span></h3>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                    <div class="imgBx">
+                        <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+                    </div>
+                    <div class="details">
+                        <h3>Title<br><span>Description</span></h3>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                        <div class="imgBx">
+                            <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+                        </div>
+                        <div class="details">
+                            <h3>Title<br><span>Description</span></h3>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                            <div class="imgBx">
+                                <img height="300" width="300" src="https://source.unsplash.com/category/wallpaper/1920x1080" alt="">
+                            </div>
+                            <div class="details">
+                                <h3>Title<br><span>Description</span></h3>
+                            </div>
+                        </div>
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 400,
+        modifier: 2,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar'
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+  </script>
+</body>
+</html>
