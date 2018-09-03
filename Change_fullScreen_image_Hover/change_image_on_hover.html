@@ -173,36 +173,12 @@
 </div>
 <section></section>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
     $(document).on('mouseover','.container .column', function() {
         $(this).addClass('active').siblings().removeClass('active');
     });
 </script>
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
 
-
-
-    let _columns = document.querySelectorAll(".container .column");
-
-    [].forEach.call(_columns, function(_columns) {
-    
-   ( () => {
-        _columns.addEventListener('mouseover', () => {
-            _columns.classList.add("active");
-        });
-        _columns.addEventListener('mouseleave', () => {
-            _columns.classList.remove("active");
-        });
-    })();
-
-       });
-    
-});
-</script> -->
 </body>
 </html>
