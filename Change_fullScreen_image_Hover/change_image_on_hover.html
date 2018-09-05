@@ -188,16 +188,14 @@
         elements[i].onmouseover  = function(){
                         
             let el = elements[0];
-            while(el)
-            {
-                if(el.tagName === "DIV"){
-
+            
+            while(el) {
+                if (el.tagName === "DIV") {
                     el.classList.remove("active");
                 }
-
                 el = el.nextSibling;
             }
-            
+
           this.classList.add("active");  
         };
     } //with javascript
