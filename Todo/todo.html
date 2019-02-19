@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Todo</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css'/>
+    <style>
+
+      body {
+        background: #333;
+        color:white;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      input {
+        width: 100%;
+        padding: 0 15px;
+        line-height: 40px;
+        font-size: 20px;
+        background-color: #d6d6d6;
+        border: none;
+        outline: none;
+        caret-color: hotpink;
+      }
+
+      button { 
+        cursor: pointer;
+        line-height: 40px;
+        font-size: 20px;
+      }
+
+      .btn {
+        border-radius: 0 !important;
+
+      }
+
+      #tasks {
+        background-color: white;
+        height:400px;
+        overflow: auto;
+        margin: 0 auto;
+        color:black;
+      }
+
+      #tasks div {
+        border-bottom:1px solid grey;
+        margin: 2%;
+        font-size: 32px;
+        padding:5%;
+        box-sizing: border-box;
+        line-height: 32px;
+      }
+
+      .delete {
+        cursor:pointer;
+        float:right;
+        color:red;
+        font-weight: bold;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1 class="mt-4 mb-3 display-4">Todo List</h1>
+      <input id="new-task" type="text">
+      <button id="add" class="btn btn-large btn-success btn-block"> <i class="fa fa-plus" style="color: balck;"></i> </button>
+      <div id="tasks"></div>
+    </div>
+
+<script>
+
+let addTask = () => {
+
+let task = document.querySelector('#new-task').value;
+let tasks = document.querySelector('#tasks');
+
+tasks.innerHTML += `
+<div> ${task} <i class="delete fa fa-close"></i> </div>
+`;
+
+document.querySelector('#new-task').value = '';
+
+};
+
+let removeTask = (e) => {
+
+if(e.target.classList.contains('delete')) {
+    e.target.parentElement.parentElement.removeChild(e.target.parentElement);
+}
+
+};
+
+document.querySelector('input').addEventListener('keypress', (e) => {
+let task = document.querySelector('#new-task').value;
+
+if(e.which === 13) {
+    if(task === '') {
+        return;
+    } else {
+        addTask();
+    }
+}
+
+});
+
+document.querySelector('button').addEventListener('click', () => {
+
+let task = document.querySelector('#new-task').value;
+
+if(task === '') {
+    return;
+} else {
+    addTask();
+}
+});
+document.querySelector('#tasks').addEventListener('click', removeTask);
+
+</script>
+
+  </body>
+
+</html>
